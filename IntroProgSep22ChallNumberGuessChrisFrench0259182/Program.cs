@@ -11,87 +11,61 @@ namespace IntroProgSep22ChallNumberGuessChrisFrench0259182
 
 
         static Random random = new Random();
-        
-        
-        
-        
-        
+
+        static int NumberToGuess;
+        static int Guess;
+        static int myGuess;
+
+
+
         static void Main(string[] args)
         {
+            int NumberToGuess = random.Next(1, 25);
 
-            void GuessingGame()
-            { 
-
-                int NumberToGuess = random.Next(1,25);
+            Console.WriteLine("Please guess a number between 1 to 25");
+            string Guess = Console.ReadLine();
+            int myGuess = int.Parse(Guess);
             
-                Console.WriteLine("Please guess a number between 1 to 25");
-                int Guess = Console.Readkey();
-                
 
-                bool isGuessCorrect() // check to see if guess is correct
+            Console.ReadKey();
 
+
+            bool Correct = true;// check to see if guess is correct
+                 
+            {
+                if (myGuess == NumberToGuess)
                 {
-                    if (Guess = NumberToGuess)
-                    {
-                        return true;
-                    }
+                    Console.WriteLine($"Dang... you are good Dawg.... you guessed {Guess}, and the number to guess was {NumberToGuess}! ");
 
-                    else
-                    {
-                        return false;
-                    }
                 }
+
+
+                else
+                {
+                   
+                }
+            
 
                 while (false)
 
+            
+
+                if (myGuess > NumberToGuess)
                 {
-
-                    if (Guess)
-                    {
-                        if (Guess > NumberToGuess)
-                        {
-                            Console.WriteLine("Opps not quite enough... guess again. ");
-
-                        }
-                        else if (Guess < NumberToGuess)
-                        {
-                            Console.WriteLine("A little over the mark there... Guess again. ");
-
-                        }
-
-                    }
-                    else
-                    {
-
-                        Console.WriteLine($"Dang... you are good Dawg.... you guessed {Guess}, and the number to guess was {NumberToGuess}! ");
-                        Console.WriteLine("Wana play again?   Y= yes N = no. ");
-
-                        string playagain = Console.ReadLine();
-
-                        if (playagain = Y)
-                        {
-                            GuessingGame();
-
-                        }
-                        else
-                        {
-                            break;
-                        }
-
-                    }
+                    Console.WriteLine("Opps not quite enough... guess again. ");
+                    //guessMyNumber();
+                }
+                else if (myGuess < NumberToGuess)
+                {
+                    Console.WriteLine("A little over the mark there... Guess again. ");
+                    //guessMyNumber();
+                }
+                else
+                {
+                    break;
                 }
 
 
-
-
-
-
-
-
-
-
-
-                Console.ReadKey();
             }
 
 
@@ -104,6 +78,93 @@ namespace IntroProgSep22ChallNumberGuessChrisFrench0259182
 
 
 
+
+
+
+
+            /* 
+             GameStart();
+             guessMyNumber();
+             guessing();
+
+
+
+
+
+
+
+
+
+         }
+
+         // methods below here
+         static void GameStart()
+         { 
+
+             int NumberToGuess = random.Next(1,25);
+
+             Console.WriteLine("Please guess a number between 1 to 25");
+             string Guess = Console.ReadLine();
+             int myGuess = int.Parse(Guess);
+
+
+             Console.ReadKey();
+         }
+
+         static void guessMyNumber()
+         { 
+             Console.WriteLine("Please guess a number between 1 to 25");
+             string Guess = Console.ReadLine();
+             int myGuess = int.Parse(Guess);
+
+             guessing();
+         }
+         static void guessing()
+         {
+             guessMyNumber();
+
+             {
+                 bool isGuessCorrect() // check to see if guess is correct
+
+                 {
+                     if (myGuess == NumberToGuess)
+                     {
+                         Console.WriteLine($"Dang... you are good Dawg.... you guessed {Guess}, and the number to guess was {NumberToGuess}! ");
+
+                     }
+
+
+                     else
+                     {
+                         return false;
+                     }
+                 }
+
+                 while (false)
+
+                 {
+
+                     if (myGuess > NumberToGuess)
+                     {
+                         Console.WriteLine("Opps not quite enough... guess again. ");
+                         guessMyNumber();
+                     }
+                     else if (myGuess < NumberToGuess)
+                     {
+                         Console.WriteLine("A little over the mark there... Guess again. ");
+                         guessMyNumber();
+                     }
+                     else
+                     {
+                         break;
+                     }
+
+
+                 }
+             }
+         }
+
+ */
 
 
         }
